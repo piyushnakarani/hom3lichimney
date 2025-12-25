@@ -24,12 +24,36 @@ body {
   color: var(--foreground);
 }
 
-.text-brand{
+.text-primary{
   color: #FED824;
 }
 
-.bg-brand{
+.text-secondary{
+  color: #A98C00;
+}
+
+.bg-primary{
   background: #FED824;
+}
+
+.bg-secondary{
+  background: #A98C00;
+}
+
+
+
+.chimney-mask {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+
+  -webkit-mask:
+    radial-gradient(circle 80px at 100% 100%, transparent 98%, black 100%);
+}
+
+
+.bg-service{
+  background: linear-gradient(180deg, #F3F6FC 0%, rgba(243, 246, 252, 0) 100%);
 }
 
 .bg-hero {

@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 
 import React, { useEffect } from "react";
 import Hero from "../Hero/Hero";
+import AboutSection from "../Aboutus/About";
+import ServiceSection from "../Service/Service";
 
 const Home = () => {
   useEffect(() => {
@@ -22,12 +24,8 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <Hero />
-      {/* <About />
-      <Feature />
-      <Services />
-      <Testimonial />
-      <Team />
-      <Choose /> */}
+      <AboutSection />
+      <ServiceSection />
     </div>
   );
 };

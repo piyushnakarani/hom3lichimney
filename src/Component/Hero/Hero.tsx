@@ -1,3 +1,4 @@
+import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
 import React from "react";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
@@ -10,16 +11,16 @@ const Hero = () => {
         <div data-aos="fade-up">
           <div className="flex items-center gap-4">
             {/* Left line */}
-            <span className="h-[2px] w-12 bg-brand"></span>
+            <span className="h-[2px] w-12 bg-primary"></span>
 
             {/* Text */}
-            <p className="text-sm sm:text-base md:text-lg font-bold tracking-[0.2em] text-brand uppercase">
+            <p className="text-sm md:text-lg font-bold tracking-[0.2em] text-primary uppercase">
               Safety First
             </p>
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl my-6 uppercase  font-extralight text-white leading-[2.5rem] md:leading-[3.5rem]">
-            <span className="text-brand font-bold uppercase">
+            <span className="text-primary font-bold uppercase">
               Efficient Chimney Installation{" "}
             </span>
             for Better Performance
@@ -58,7 +59,9 @@ const Hero = () => {
 
                 <div className="leading-tight">
                   <p className="text-xs text-gray-600">Download on the</p>
-                  <p className="text-sm lg:text-lg font-semibold text-black">App Store</p>
+                  <p className="text-sm lg:text-lg font-semibold text-black">
+                    App Store
+                  </p>
                 </div>
               </a>
             </div>
@@ -76,6 +79,12 @@ const Hero = () => {
           priority
         />
       </div>
+      {/* <div className="absolute bottom-10 left-0 w-full pointer-events-none">
+        <HeroTitle
+          title="HOME3LI"
+          className="absolute left-0 text-[280px] -bottom-[90px]"
+        />
+      </div> */}
     </div>
   );
 };

@@ -10,7 +10,7 @@ type Props = {
 const Container = ({ children, className = "" }: Props) => {
   return (
     <div
-      className={`mx-auto w-[90%] md:w-[80%] xl:w-[75%] ${className}`}
+      className={`mx-auto w-[90%] md:w-[80%]  ${className}`}
     >
       {children}
     </div>
