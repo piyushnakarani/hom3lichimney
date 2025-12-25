@@ -1,0 +1,83 @@
+import Image from "next/image";
+import React from "react";
+import { FaGooglePlay, FaApple } from "react-icons/fa";
+
+const Hero = () => {
+  return (
+    <div className="relative w-full h-[100vh] sm:h-screen bg-hero bg-cover bg-center justify-center flex flex-col ">
+      {/* <div className="absolute inset-0 bg-[linear-gradient(270deg,rgba(11,18,23,0)_0%,rgba(11,18,23,0.5)_65%)]" /> */}
+      <div className=" w-[90%] md:w-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols-2 gap-10 ">
+        <div data-aos="fade-up">
+          <div className="flex items-center gap-4">
+            {/* Left line */}
+            <span className="h-[2px] w-12 bg-brand"></span>
+
+            {/* Text */}
+            <p className="text-sm sm:text-base md:text-lg font-bold tracking-[0.2em] text-brand uppercase">
+              Safety First
+            </p>
+          </div>
+
+          <h1 className="text-3xl md:text-4xl lg:text-5xl my-6 uppercase  font-extralight text-white leading-[2.5rem] md:leading-[3.5rem]">
+            <span className="text-brand font-bold uppercase">
+              Efficient Chimney Installation{" "}
+            </span>
+            for Better Performance
+          </h1>
+          <div>
+            <p className="text-base md:text-sm lg:text-lg">
+              Our chimney installation services are designed to ensure safe
+              operation, efficient airflow, and long-lasting performance. We use
+              high-quality materials and proven installation methods to meet
+              safety standards and improve energy efficiency.
+            </p>
+          </div>
+          {/* Button */}
+          <div className="mt-8 flex flex-col sm:flex-row w-fit sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="items-center justify-center flex gap-2">
+              {/* Google Play */}
+              <a
+                href="#"
+                className="flex items-center gap-3 rounded-xl bg-white px-5 py-3 shadow-md transition hover:scale-[1.02]"
+              >
+                <FaGooglePlay className="h-6 w-6 md:h-8 md:w-8 text-black" />
+                <div className="leading-tight">
+                  <p className="text-xs uppercase text-gray-600">Get it on</p>
+                  <p className="text-sm md:text-lg font-semibold text-black">
+                    Google Play
+                  </p>
+                </div>
+              </a>
+
+              {/* App Store */}
+              <a
+                href="#"
+                className="flex items-center gap-3 rounded-xl bg-white px-5 py-3 shadow-md transition hover:scale-[1.02]"
+              >
+                <FaApple className="h-8 w-8 text-black" />
+
+                <div className="leading-tight">
+                  <p className="text-xs text-gray-600">Download on the</p>
+                  <p className="text-sm lg:text-lg font-semibold text-black">App Store</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Bottom shape image */}
+      <div className="absolute bottom-0 right-0 w-full pointer-events-none">
+        <Image
+          src="/Hero/bottom.png"
+          alt="Hero bottom shape"
+          width={1200}
+          height={100}
+          className="ml-auto w-1/2 h-auto"
+          priority
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
