@@ -1,10 +1,12 @@
 import Container from "@/Custom/Container";
 import ServiceCard from "./ServiceCard";
 import { services } from "@/Constant/constant";
+import HeroTitle from "@/Custom/HeroTitle";
+import { MdArrowOutward } from "react-icons/md";
 
 export default function ServiceSection() {
   return (
-    <section className="py-20 bg-service">
+    <section className="py-20 bg-service relative">
       <Container>
         {/* Small title */}
         <div className="flex justify-center">
@@ -33,6 +35,12 @@ export default function ServiceSection() {
           {services.map((item, i) => (
             <ServiceCard key={i} item={item} />
           ))}
+        </div>
+        <div className="flex justify-center">
+          <button className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition uppercase">
+            Load more services
+            <MdArrowOutward height={10} width={10} />
+          </button>
         </div>
       </Container>
     </section>

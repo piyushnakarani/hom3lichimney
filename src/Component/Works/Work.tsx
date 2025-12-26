@@ -1,0 +1,93 @@
+import Container from "@/Custom/Container";
+import Image from "next/image";
+import { MdArrowOutward } from "react-icons/md";
+
+const steps = [
+  "Download the App",
+  "Choose Your Service",
+  "Pick a Schedule",
+  "Relax While We Work",
+  "Pay Securely on the App",
+];
+
+export default function HowItWorks() {
+  return (
+    <section className="py-20">
+      <Container className="">
+        {/* HEADER */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mb-6 lg:mb-12">
+          <div className="flex flex-col items-start">
+            <div className="flex gap-2 items-center">
+              <p className="text-sm md:text-lg font-bold tracking-[0.25em] text-secondary uppercase">
+                Process
+              </p>
+              <span className="h-[2px] w-12 bg-secondary" />
+            </div>
+            <div>
+              <h1 className="text-xl md:text-2xl lg:text-4xl my-4 md:my-6 uppercase  font-extralight text-black leading-[1rem] md:leading-[2rem]">
+                How{" "}
+                <span className="text-primary font-bold uppercase text-secondary">
+                  does it works?
+                </span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="hidden lg:block lg:text-right">
+            <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition">
+              DOWNLOAD APP
+              <MdArrowOutward height={10} width={10} />
+            </button>
+          </div>
+        </div>
+
+        {/* CONTENT GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-6 lg:gap-10 items-center">
+          {/* LEFT - STEPS */}
+          <div className="space-y-4 col-span-2">
+            {steps.map((step, i) => (
+              <div
+                key={i}
+                className={`relative flex items-center justify-between rounded-xl px-5 py-6 pl-12 shadow-primary transition 
+        ${i === 0 ? "bg-[#1F586E] text-white" : "bg-white text-gray-500"}
+      `}
+              >
+                {/* Number circle (half outside) */}
+                <span
+                  className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2
+        flex h-10 w-10 items-center justify-center rounded-full bg-primary
+        text-black font-bold shadow-md border-3 border-white"
+                >
+                  {i + 1}
+                </span>
+
+                {/* Text */}
+                <p className="font-bold uppercase text-xl">{step}</p>
+
+                {/* Arrow */}
+                <span
+                  className={`font-semibold ${
+                    i === 0 ? "text-2xl text-primary" : "text-xl text-gray-400"
+                  }`}
+                >
+                  →
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT - IMAGE */}
+          <div className="relative rounded-3xl overflow-hidden col-span-4">
+            <Image
+              src="/Work/WorkRight.png" // replace with your image
+              alt="How it works"
+              width={850}
+              height={500}
+              className=" object-cover"
+            />
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

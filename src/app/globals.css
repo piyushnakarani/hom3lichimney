@@ -59,3 +59,18 @@ body {
 .bg-hero {
   background-image: url('/Hero/main.png');
 }
+
+.bg-right{
+  background-image: url('/Hero/House.png');
+}
+.bg-choose {
+  background-image: url('/Chooseus/WhyChoose.png');
+}
+
+.shadow-primary{
+  box-shadow: 0px 41.63px 45.88px 0px #0654AA12;
+}
+
+.bg-contact{
+  background-image: url('/Contactus/Contactus.png');
+}
