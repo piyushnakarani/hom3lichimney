@@ -1,3 +1,4 @@
+import CornerShape from "@/Constant/constant";
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -11,6 +12,7 @@ export default function ServiceCard({ item }: any) {
         height={450}
         className="h-[320px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
+      <CornerShape className="absolute h-20 w-20 top-0 right-0" color="#F9FAFD"/>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/90" />
 

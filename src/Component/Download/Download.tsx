@@ -4,7 +4,7 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 export default function DownloadAppSection() {
   return (
-    <section className="relative w-full py-20">
+    <section className="relative w-full py-20" id="download">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] items-center gap-12">
           {/* House pattern background */}
@@ -71,7 +71,7 @@ export default function DownloadAppSection() {
           </div>
 
           {/* RIGHT VISUAL */}
-          <div className="relative w-full h-[420px] lg:h-[520px] rounded-3xl bg-white overflow-hidden">
+          <div className="relative w-full  lg:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden">
             {/* Phone image */}
             <div className="relative z-10 flex h-full items-center justify-center">
               <Image

@@ -6,7 +6,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function ServiceSection() {
   return (
-    <section className="py-20 bg-service relative">
+    <section className="py-20 bg-service relative" id="work">
       <Container>
         {/* Small title */}
         <div className="flex justify-center">

@@ -6,7 +6,7 @@ import WhyChooseAccordion from "./WhychooseItem";
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative w-[95%] mx-auto rounded-3xl overflow-hidden bg-choose bg-cover">
+    <section className="relative w-[95%] mx-auto rounded-3xl overflow-hidden bg-choose bg-cover" id="whychoose">
       
       {/* Blue overlay (BACKGROUND ONLY) */}
       <div className="absolute inset-0 bg-[#071824]/90"></div>

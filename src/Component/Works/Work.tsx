@@ -12,7 +12,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20">
+    <section className="py-20" id="howwork">
       <Container className="">
         {/* HEADER */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mb-6 lg:mb-12">

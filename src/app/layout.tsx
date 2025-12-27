@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ResponsiveNav from "@/Component/Home/Navbar/ResponsiveNav";
 import { manrope } from "./fonts";
+import Footer from "@/Component/Home/Footer/Footer";
 
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
       <body className={`${manrope.className} antialiased bg-white`}>
         <ResponsiveNav />
         {children}
-        {/* <Footer /> */}
+        <Footer />
         {/* <TopScroll /> */}
       </body>
     </html>
