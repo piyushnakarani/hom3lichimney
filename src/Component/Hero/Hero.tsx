@@ -5,7 +5,7 @@ import { FaGooglePlay, FaApple } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[100vh] sm:h-screen bg-hero bg-cover bg-center justify-center flex flex-col ">
+    <div className="relative w-full h-[100vh] sm:h-screen bg-hero bg-cover bg-center justify-center flex flex-col overflow-hidden">
       {/* <div className="absolute inset-0 bg-[linear-gradient(270deg,rgba(11,18,23,0)_0%,rgba(11,18,23,0.5)_65%)]" /> */}
       <div className=" w-[90%] md:w-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols-2 gap-10 ">
         <div data-aos="fade-up">
@@ -26,7 +26,7 @@ const Hero = () => {
             for Better Performance
           </h1>
           <div>
-            <p className="text-base md:text-sm lg:text-lg">
+            <p className="text-base text-white md:text-sm lg:text-lg">
               Our chimney installation services are designed to ensure safe
               operation, efficient airflow, and long-lasting performance. We use
               high-quality materials and proven installation methods to meet
@@ -69,7 +69,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Bottom shape image */}
-      <div className="absolute bottom-0 right-0 w-full pointer-events-none">
+      <div className="absolute bottom-0 right-0 z-10 w-full pointer-events-none">
         <Image
           src="/Hero/bottom.png"
           alt="Hero bottom shape"
@@ -79,12 +79,11 @@ const Hero = () => {
           priority
         />
       </div>
-      {/* <div className="absolute bottom-10 left-0 w-full pointer-events-none">
         <HeroTitle
-          title="HOME3LI"
-          className="absolute left-0 text-[280px] -bottom-[90px]"
+          title="HOM3LI"
+          className="absolute -bottom-10 left-4 lg:-bottom-45 w-full lg:left-10 z-[0] pointer-events-none"
+          TextclassName="text-[110px] md:text-[150px] lg:text-[250px] lg:leading-[60vh]"
         />
-      </div> */}
     </div>
   );
 };

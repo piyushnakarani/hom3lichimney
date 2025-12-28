@@ -1,13 +1,12 @@
+import Container from "@/Custom/Container";
 import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
-import React from "react";
-import { FaGooglePlay, FaApple } from "react-icons/fa";
 
 const ServiceHero = () => {
   return (
-    <div className="relative w-full h-[60vh] sm:h-[70vh] bg-cover bg-center justify-center flex flex-col"
+    <div className="relative w-full h-[60vh] sm:h-[70vh] bg-cover bg-center justify-center flex flex-col overflow-hidden"
     style={{ backgroundImage: "url('/ServiceDetails/ChimneyCap.png')" }}>
-      <div className=" w-[90%] md:w-[80%] mx-auto items-center grid grid-cols-1 xl:grid-cols- gap-10 ">
+      <Container className="items-center grid grid-cols-1 xl:grid-cols- gap-10 relative z-10">
         <div data-aos="fade-up">
           <div className="flex items-center gap-4">
             {/* Left line */}
@@ -26,14 +25,14 @@ const ServiceHero = () => {
             Installation
           </h1>
           <div>
-            <p className="text-base md:text-sm lg:w-[50%] lg:text-lg">
+            <p className="text-base text-white md:text-sm lg:w-[50%] lg:text-lg">
             The #1 Way to Stop Animals, Rain, and Debris from Destroying Your Chimney. An open flue is an open invitation: squirrels, birds, raccoons, leaves, and gallons of rainwater pour straight in.
             </p>
           </div>
         </div>
-      </div>
+      </Container>
       {/* Bottom shape image */}
-      <div className="absolute bottom-0 right-0 w-full pointer-events-none">
+      <div className="absolute bottom-0 right-0 w-full pointer-events-none z-11">
         <Image
           src="/Hero/bottom.png"
           alt="Hero bottom shape"
@@ -41,8 +40,23 @@ const ServiceHero = () => {
           height={100}
           className="ml-auto w-1/2 h-auto"
           priority
+        />      
+      </div>
+      <div className="absolute bottom-0 right-0 w-full pointer-events-none z-9">
+        <Image
+          src="/Hero/Yellowborder.png"
+          alt="Hero bottom shape"
+          width={1200}
+          height={100}
+          className="ml-auto w-full h-auto"
+          priority
         />
       </div>
+       <HeroTitle
+          title="Chimney Cap"
+          className="absolute -bottom-5 lg:-bottom-25 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
+          TextclassName="text-center text-[60px] md:text-[110px] lg:text-[250px] lg:leading-[40vh] !from-gray-200/20"
+        />
     </div>
   );
 };

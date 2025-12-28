@@ -1,4 +1,5 @@
 import Container from "@/Custom/Container";
+import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -12,8 +13,8 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20" id="howwork">
-      <Container className="">
+    <section className="py-20 relative" id="howwork">
+      <Container className="relative z-10">
         {/* HEADER */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mb-6 lg:mb-12">
           <div className="flex flex-col items-start">
@@ -88,6 +89,11 @@ export default function HowItWorks() {
           </div>
         </div>
       </Container>
+      <HeroTitle
+        title="How it works"
+        className="absolute -bottom-3 lg:-bottom-50 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
+        TextclassName="text-center text-[60px] md:text-[150px] lg:text-[250px] lg:leading-[60vh] !bg-gradient-to-t"
+      />
     </section>
   );
 }

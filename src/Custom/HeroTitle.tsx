@@ -4,21 +4,17 @@ import { oswald } from "@/app/fonts";
 interface HeroTitleProps {
   title: string;
   className?: string;
+  TextclassName?: string;
 }
 
-export default function HeroTitle({ title, className }: HeroTitleProps) {
+export default function HeroTitle({ title, className,TextclassName  }: HeroTitleProps) {
   return (
-    <h1
-      className={`${oswald.className}
-      leading-none 
-      tracking-[-0.02em] 
-      uppercase
-      bg-gradient-to-b from-white/15 to-black/15
-      bg-clip-text text-transparent
-      ${className ?? ""}
-    `}
-    >
+    <div className={className}>
+    <h1 className={`${TextclassName} ${oswald.className} font-bold
+               bg-gradient-to-b from-gray-400/20 to-transparent
+               bg-clip-text text-transparent uppercase`}>
       {title}
     </h1>
+  </div>
   );
 }
