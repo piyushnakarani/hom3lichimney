@@ -6,9 +6,9 @@ export default function AboutSection() {
   return (
     <section className="py-20" id="aboutus">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-4 xl:gap-16 xl:grid-cols-5">
+        <div className="grid grid-cols-1 items-center gap-4 lg:gap-16 lg:grid-cols-5">
           {/* LEFT IMAGE */}
-          <div className="relative order-2 xl:order-1 col-span-2 justify-center">
+          <div className="relative order-2 lg::order-1 col-span-2 justify-center">
             <div className="overflow-hidden">
               <Image
                 src="/Hero/About1.png" // replace with your image
@@ -21,7 +21,7 @@ export default function AboutSection() {
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="col-span-3 order-1 xl:order-2">
+          <div className="col-span-3 order-1 lg:order-2">
             <div className="flex items-center gap-4">
               {/* Left line */}
 
@@ -39,9 +39,9 @@ export default function AboutSection() {
               </span>
             </h1>
 
-            <div className="grid grid-cols-1 xl:grid-cols-5 gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
               {/* IMAGE — 2 columns */}
-              <div className="hidden xl:flex order-1 xl:order-2 xl:col-span-2  justify-center">
+              <div className="hidden lg:flex order-1 lg:order-2 lg:col-span-2  justify-center">
                 <div className="overflow-hidden rounded-[28px]">
                   <Image
                     src="/Hero/About2.png"
@@ -54,7 +54,7 @@ export default function AboutSection() {
               </div>
 
               {/* TEXT — 3 columns */}
-              <div className="order-2 xl:order-1 xl:col-span-3">
+              <div className="order-2 lg:order-1 lg:col-span-3">
                 <div className="space-y-4 text-gray-600">
                   <p>
                     Hom3li is your local, family-focused team keeping homes warm

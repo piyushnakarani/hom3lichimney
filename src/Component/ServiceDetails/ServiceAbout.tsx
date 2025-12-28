@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Container from "@/Custom/Container";
 import { MdArrowOutward } from "react-icons/md";
-import CornerShape from "@/Constant/constant";
+import CornerShape from "@/Custom/Custom";
 
 export default function ServiceAbout({ service }: any) {
   const { about } = service;
@@ -14,7 +14,7 @@ export default function ServiceAbout({ service }: any) {
             {/* Main image */}
             <div className="relative  rounded-[32px] overflow-hidden w-113 h-125">
               <Image
-                src={about.images.main}
+                src={about.images.main || "/ServiceDetails/ChimneyCapInstall/ChimneyCap1.png"}
                 alt={about.titleHighlight}
                 fill
                 className="w-full h-full object-cover"
@@ -28,7 +28,7 @@ export default function ServiceAbout({ service }: any) {
             <div className="absolute -bottom-20 border-6 border-white z-10 right-0 lg:right-12 w-[250px] h-[270px] rounded-[34px] overflow-hidden">
               <div className="relative overflow-hidden">
                 <Image
-                  src={about.images.overlay}
+                  src={about.images.overlay || "/ServiceDetails/ChimneyCapInstall/ChimneyCap2.png"}
                   alt={about.titleHighlight}
                   width={300}
                   height={1000}

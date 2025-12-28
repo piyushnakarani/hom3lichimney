@@ -1,4 +1,5 @@
 import Container from "@/Custom/Container";
+import { PlayStoreIcon } from "@/Custom/Custom";
 import Image from "next/image";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 
@@ -41,9 +42,9 @@ export default function DownloadAppSection() {
                 {/* Google Play */}
                 <a
                   href="#"
-                  className="flex items-center gap-3 rounded-xl bg-black px-5 py-3 shadow-md transition hover:scale-[1.02]"
+                  className="flex items-center gap-3 rounded-xl bg-black px-5 py-2 shadow-md transition hover:scale-[1.02]"
                 >
-                  <FaGooglePlay className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                  <PlayStoreIcon className="h-6 w-6 md:h-8 md:w-8 text-white" />
                   <div className="leading-tight">
                     <p className="text-xs text-white">Get it on</p>
                     <p className="text-sm md:text-lg font-semibold text-white">
@@ -55,7 +56,7 @@ export default function DownloadAppSection() {
                 {/* App Store */}
                 <a
                   href="#"
-                  className="flex items-center gap-3 rounded-xl bg-black px-5 py-3 shadow-md transition hover:scale-[1.02]"
+                  className="flex items-center gap-3 rounded-xl bg-black px-5 py-2 shadow-md transition hover:scale-[1.02]"
                 >
                   <FaApple className="h-8 w-8 text-white" />
 

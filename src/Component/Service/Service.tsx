@@ -94,7 +94,7 @@ export default function ServiceSection() {
             disabled={currentPage === totalPages - 1}
             className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black uppercase transition disabled:opacity-40"
           >
-            Next
+            View More
             <MdArrowOutward size={14} />
           </button>
         </div>

@@ -1,7 +1,8 @@
+import { PlayStoreIcon } from "@/Custom/Custom";
 import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
 import React from "react";
-import { FaGooglePlay, FaApple } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -39,9 +40,9 @@ const Hero = () => {
               {/* Google Play */}
               <a
                 href="#"
-                className="flex items-center gap-3 rounded-xl bg-white px-5 py-3 shadow-md transition hover:scale-[1.02]"
+                className="flex items-center gap-2 rounded-xl bg-white px-5 py-2 shadow-md transition hover:scale-[1.02]"
               >
-                <FaGooglePlay className="h-6 w-6 md:h-8 md:w-8 text-black" />
+                <PlayStoreIcon className="h-6 w-6 md:h-8 md:w-8 text-black" />
                 <div className="leading-tight">
                   <p className="text-xs uppercase text-gray-600">Get it on</p>
                   <p className="text-sm md:text-lg font-semibold text-black">
@@ -53,7 +54,7 @@ const Hero = () => {
               {/* App Store */}
               <a
                 href="#"
-                className="flex items-center gap-3 rounded-xl bg-white px-5 py-3 shadow-md transition hover:scale-[1.02]"
+                className="flex items-center gap-2 rounded-xl bg-white px-5 py-2 shadow-md transition hover:scale-[1.02]"
               >
                 <FaApple className="h-8 w-8 text-black" />
 

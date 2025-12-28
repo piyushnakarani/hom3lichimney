@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Container from "@/Custom/Container";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail, MdCall } from "react-icons/md";
@@ -19,6 +20,59 @@ export default function ContactUs({ isService }: ContactUsProps) {
     : "text-white placeholder-white/60";
   const borderColor = isService ? "border-gray-200" : "border-white/10";
 
+  /* FORM STATE */
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  /* INPUT CHANGE */
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  /* SUBMIT */
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send message");
+      }
+    } catch (error) {
+      alert("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="relative w-[95%] mx-auto rounded-3xl overflow-hidden bg-contact bg-cover">
       {/* BACKGROUND OVERLAY */}
@@ -31,11 +85,11 @@ export default function ContactUs({ isService }: ContactUsProps) {
       {/* CONTENT */}
       <Container className="relative z-10 py-6 lg:py-10 !w-[85%]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-          
+
           {/* FORM */}
           <div className="order-2 lg:order-1">
-            <form className="space-y-5 p-1 md:p-8">
-              
+            <form onSubmit={handleSubmit} className="space-y-5 p-1 md:p-8">
+
               {/* NAME + EMAIL */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
@@ -44,6 +98,10 @@ export default function ContactUs({ isService }: ContactUsProps) {
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
                     placeholder="Enter full name"
                     className={`w-full rounded-full px-5 py-3 outline-none transition
                       ${inputBg} ${inputText} border ${borderColor} focus:border-primary`}
@@ -56,6 +114,10 @@ export default function ContactUs({ isService }: ContactUsProps) {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
                     placeholder="Enter email address"
                     className={`w-full rounded-full px-5 py-3 outline-none transition
                       ${inputBg} ${inputText} border ${borderColor} focus:border-primary`}
@@ -77,6 +139,10 @@ export default function ContactUs({ isService }: ContactUsProps) {
                   <span className={`${mutedText} text-sm font-medium`}>+1</span>
                   <input
                     type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    required
                     placeholder="Enter phone number"
                     className={`w-full bg-transparent outline-none ${inputText}`}
                   />
@@ -89,13 +155,25 @@ export default function ContactUs({ isService }: ContactUsProps) {
                   Your Subject*
                 </label>
                 <select
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  required
                   className={`w-full rounded-full px-5 py-3 outline-none transition
                     ${inputBg} ${inputText} border ${borderColor} focus:border-primary`}
                 >
-                  <option className="text-black">Select</option>
-                  <option className="text-black">General Inquiry</option>
-                  <option className="text-black">Get a Quote</option>
-                  <option className="text-black">Schedule Service</option>
+                  <option value="" className="text-black">
+                    Select
+                  </option>
+                  <option value="General Inquiry" className="text-black">
+                    General Inquiry
+                  </option>
+                  <option value="Get a Quote" className="text-black">
+                    Get a Quote
+                  </option>
+                  <option value="Schedule Service" className="text-black">
+                    Schedule Service
+                  </option>
                 </select>
               </div>
 
@@ -105,6 +183,9 @@ export default function ContactUs({ isService }: ContactUsProps) {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
                   rows={4}
                   placeholder="Enter some comments / notes"
                   className={`w-full rounded-2xl px-5 py-4 resize-none outline-none transition
@@ -115,10 +196,11 @@ export default function ContactUs({ isService }: ContactUsProps) {
               {/* SUBMIT */}
               <button
                 type="submit"
+                disabled={loading}
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3
-                  font-semibold text-black hover:bg-yellow-400 transition"
+                  font-semibold text-black hover:bg-yellow-400 transition disabled:opacity-60"
               >
-                Submit →
+                {loading ? "Sending..." : "Submit →"}
               </button>
             </form>
           </div>

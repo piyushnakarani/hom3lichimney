@@ -6,7 +6,7 @@ const ServiceHero = ({ service }: any) => {
   const { hero } = service;
   return (
     <div className="relative w-full h-[60vh] sm:h-[70vh] bg-cover bg-center justify-center flex flex-col overflow-hidden"
-    style={{ backgroundImage: "url('/ServiceDetails/ChimneyCap.png')" }}>
+    style={{ backgroundImage: `url('${service?.hero?.bgImage || "/ServiceDetails/ChimneyCapInstall/ChimneyCap.png"}')` }}>
       <Container className="items-center grid grid-cols-1 xl:grid-cols- gap-10 relative z-10">
         <div data-aos="fade-up">
           <div className="flex items-center gap-4">
