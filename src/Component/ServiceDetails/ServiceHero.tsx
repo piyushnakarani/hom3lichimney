@@ -2,7 +2,8 @@ import Container from "@/Custom/Container";
 import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
 
-const ServiceHero = () => {
+const ServiceHero = ({ service }: any) => {
+  const { hero } = service;
   return (
     <div className="relative w-full h-[60vh] sm:h-[70vh] bg-cover bg-center justify-center flex flex-col overflow-hidden"
     style={{ backgroundImage: "url('/ServiceDetails/ChimneyCap.png')" }}>
@@ -20,13 +21,13 @@ const ServiceHero = () => {
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl my-6 uppercase  font-extralight text-white leading-[2.5rem] md:leading-[3.5rem]">
             <span className="text-primary font-bold uppercase">
-            Chimney Cap{" "}
+            {hero.headingPrimary}{" "}
             </span>
-            Installation
+            {hero.headingSecondary}
           </h1>
           <div>
             <p className="text-base text-white md:text-sm lg:w-[50%] lg:text-lg">
-            The #1 Way to Stop Animals, Rain, and Debris from Destroying Your Chimney. An open flue is an open invitation: squirrels, birds, raccoons, leaves, and gallons of rainwater pour straight in.
+            {hero.shortDesc}
             </p>
           </div>
         </div>
@@ -53,7 +54,7 @@ const ServiceHero = () => {
         />
       </div>
        <HeroTitle
-          title="Chimney Cap"
+          title={hero.bigText}
           className="absolute -bottom-5 lg:-bottom-25 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
           TextclassName="text-center text-[60px] md:text-[110px] lg:text-[250px] lg:leading-[40vh] !from-gray-200/20"
         />

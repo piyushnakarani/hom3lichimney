@@ -1,4 +1,3 @@
-
 import ContactUs from "@/Component/Contactus/Contact";
 import ServiceAbout from "@/Component/ServiceDetails/ServiceAbout";
 import ServiceDetails from "@/Component/ServiceDetails/ServiceDetails";
@@ -20,9 +19,7 @@ export default async function Services({
 }) {
   const { slug } = await params; // ✅ REQUIRED in Next 15
 
-  const service = services.find(
-    (item) => item.slug === slug
-  );
+  const service = services.find((item) => item.slug === slug);
 
   if (!service) {
     notFound();
@@ -30,10 +27,10 @@ export default async function Services({
 
   return (
     <div className="mb-4 lg:mb-14">
-    <ServiceHero />
-    <ServiceAbout />
-    <ServiceDetails />
-    <ContactUs isService={true}/>
+      <ServiceHero service={service} />
+      <ServiceAbout service={service} />
+      <ServiceDetails service={service} />
+      <ContactUs isService={true} />
     </div>
   );
 }
