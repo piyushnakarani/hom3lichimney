@@ -1,11 +1,12 @@
 import Container from "@/Custom/Container";
 import { PlayStoreIcon } from "@/Custom/Custom";
 import Image from "next/image";
+import Link from "next/link";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 export default function DownloadAppSection() {
   return (
-    <section className="relative w-full py-20" id="download">
+    <section className="relative h-[85vh] lg:h-auto w-full py-20" id="download">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] items-center gap-12">
           {/* House pattern background */}
@@ -40,8 +41,10 @@ export default function DownloadAppSection() {
             <div className="mt-8 flex flex-col sm:flex-row w-fit sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
               <div className="items-center justify-center flex gap-2">
                 {/* Google Play */}
-                <a
-                  href="#"
+                <Link
+                  href="https://play.google.com/store/apps/details?id=absolute.com.homeservice.oren&pcampaignid=web_share"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 rounded-xl bg-black px-5 py-2 shadow-md transition hover:scale-[1.02]"
                 >
                   <PlayStoreIcon className="h-6 w-6 md:h-8 md:w-8 text-white" />
@@ -51,11 +54,13 @@ export default function DownloadAppSection() {
                       Google Play
                     </p>
                   </div>
-                </a>
+                </Link>
 
                 {/* App Store */}
-                <a
-                  href="#"
+                <Link
+                  href="https://apps.apple.com/in/app/hom3li/id6748115471"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 rounded-xl bg-black px-5 py-2 shadow-md transition hover:scale-[1.02]"
                 >
                   <FaApple className="h-8 w-8 text-white" />
@@ -66,21 +71,31 @@ export default function DownloadAppSection() {
                       App Store
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* RIGHT VISUAL */}
-          <div className="relative w-full  lg:h-[420px] lg:h-[520px] rounded-3xl overflow-hidden">
-            {/* Phone image */}
-            <div className="relative z-10 flex h-full items-center justify-center">
+          <div className="relative grid grid-cols-2">
+            <div>
+              <div className="flex h-full items-center justify-center">
+                <Image
+                  src="/Download/download.png"
+                  alt="App Preview"
+                  width={320}
+                  height={500}
+                  className="drop-shadow-2xl absolute w-100 -top-15 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:-top-60"
+                />
+              </div>
+            </div>
+            <div className="hidden lg:flex h-full items-center justify-center">
               <Image
-                src="/Download/download.png"
+                src="/Download/cartoon.png"
                 alt="App Preview"
-                width={320}
-                height={500}
-                className="drop-shadow-2xl absolute w-[400px]  -bottom-45"
+                width={420}
+                height={900}
+                className="drop-shadow-2xl absolute w-100 top-0 lg:-top-65"
               />
             </div>
           </div>

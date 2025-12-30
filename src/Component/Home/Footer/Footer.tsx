@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex justify-center md:justify-start">
             <Image
-              src="/logo.png"
+              src="/Hero/logo.png"
               alt="Hom3li"
               width={150}
               height={50}

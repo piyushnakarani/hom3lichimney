@@ -1,7 +1,7 @@
 import { PlayStoreIcon } from "@/Custom/Custom";
 import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 import { FaApple } from "react-icons/fa";
 
 const Hero = () => {
@@ -38,8 +38,10 @@ const Hero = () => {
           <div className="mt-8 flex flex-col sm:flex-row w-fit sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <div className="items-center justify-center flex gap-2">
               {/* Google Play */}
-              <a
-                href="#"
+              <Link
+                href="https://play.google.com/store/apps/details?id=absolute.com.homeservice.oren&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-xl bg-white px-5 py-2 shadow-md transition hover:scale-[1.02]"
               >
                 <PlayStoreIcon className="h-6 w-6 md:h-8 md:w-8 text-black" />
@@ -49,11 +51,13 @@ const Hero = () => {
                     Google Play
                   </p>
                 </div>
-              </a>
+              </Link>
 
               {/* App Store */}
-              <a
-                href="#"
+              <Link
+                href="https://apps.apple.com/in/app/hom3li/id6748115471"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-xl bg-white px-5 py-2 shadow-md transition hover:scale-[1.02]"
               >
                 <FaApple className="h-8 w-8 text-black" />
@@ -64,7 +68,7 @@ const Hero = () => {
                     App Store
                   </p>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -80,11 +84,11 @@ const Hero = () => {
           priority
         />
       </div>
-        <HeroTitle
-          title="HOM3LI"
-          className="absolute -bottom-10 left-4 lg:-bottom-45 w-full lg:left-10 z-[0] pointer-events-none"
-          TextclassName="text-[110px] md:text-[150px] lg:text-[250px] lg:leading-[60vh]"
-        />
+      <HeroTitle
+        title="HOM3LI"
+        className="absolute -bottom-10 left-4 lg:-bottom-45 w-full lg:left-10 z-[0] pointer-events-none"
+        TextclassName="text-[110px] md:text-[150px] lg:text-[250px] lg:leading-[60vh]"
+      />
     </div>
   );
 };

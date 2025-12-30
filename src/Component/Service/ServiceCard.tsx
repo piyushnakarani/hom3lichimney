@@ -23,7 +23,7 @@ export default function ServiceCard({ item }: any) {
         <div className="absolute inset-0 flex flex-col justify-end py-6 px-4 text-white">
           <div className="transition-all duration-500">
             {/* Title */}
-            <h3 className="text-xl font-semibold tracking-wide">
+            <h3 className="text-xl font-semibold tracking-wide w-[90%]">
               {item.title}
             </h3>
 

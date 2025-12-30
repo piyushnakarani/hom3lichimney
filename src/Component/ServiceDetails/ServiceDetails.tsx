@@ -4,7 +4,7 @@ import { HiCheck } from "react-icons/hi";
 export default function ServiceDetails({ service }: any) {
   const { details } = service;
   return (
-    <section className="py-20">
+    <section className="py-5 lg:py-20">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           
@@ -21,7 +21,7 @@ export default function ServiceDetails({ service }: any) {
                   className="flex gap-4 text-gray-700 leading-relaxed"
                 >
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#9C7A12] text-white">
-                    <HiCheck className="h-4 w-4" />
+                    <HiCheck className="w-4 h-4" />
                   </span>
                   <p>{item}</p>
                 </li>
@@ -39,7 +39,7 @@ export default function ServiceDetails({ service }: any) {
               {details.rightCard.points.map((item: string, i: number) => (
                 <li
                   key={i}
-                  className="flex gap-4 text-gray-700 leading-relaxed"
+                  className="flex gap-2 lg:gap-4 text-gray-700 leading-relaxed justify-start"
                 >
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#9C7A12] text-white">
                     <HiCheck className="h-4 w-4" />

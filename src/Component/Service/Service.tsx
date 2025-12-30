@@ -83,7 +83,7 @@ export default function ServiceSection() {
           <button
             onClick={handlePrev}
             disabled={currentPage === 0}
-            className="inline-flex items-center gap-2 rounded-full border border-primary px-8 py-4 text-sm font-semibold uppercase transition disabled:opacity-40"
+            className="inline-flex items-center gap-2 rounded-full border border-primary px-8 py-4 text-sm text-black font-semibold uppercase transition disabled:opacity-40"
           >
             <MdArrowBack size={14} />
             Previous

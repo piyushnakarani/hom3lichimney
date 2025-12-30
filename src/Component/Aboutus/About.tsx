@@ -1,5 +1,8 @@
+import StoreButton from "@/Custom/Button";
 import Container from "@/Custom/Container";
+import CornerShape from "@/Custom/Custom";
 import Image from "next/image";
+import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
 export default function AboutSection() {
@@ -8,15 +11,17 @@ export default function AboutSection() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-4 lg:gap-16 lg:grid-cols-5">
           {/* LEFT IMAGE */}
-          <div className="relative order-2 lg::order-1 col-span-2 justify-center">
-            <div className="overflow-hidden">
+          <div className="relative order-2 mt-10 lg:mb-0 lg::order-1 col-span-2 justify-center">
+            <div className="relative mx-auto rounded-[32px] overflow-hidden w-80 h-90  md:w-125 md:h-140">
               <Image
-                src="/Hero/About1.png" // replace with your image
-                alt="Chimney installation"
-                width={600}
-                height={500}
-                className="h-full w-full object-cover"
+                src="/Hero/About1.png"
+                alt="about"
+                fill
+                className="object-cover"
               />
+              <div className="absolute top-0 right-0 h-20 w-20 overflow-hidden z-20">
+                <CornerShape className="h-full w-full" color="white" />
+              </div>
             </div>
           </div>
 
@@ -42,14 +47,20 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
               {/* IMAGE — 2 columns */}
               <div className="hidden lg:flex order-1 lg:order-2 lg:col-span-2  justify-center">
-                <div className="overflow-hidden rounded-[28px]">
+                <div className="relative rounded-[32px] overflow-hidden w-113 h-95">
                   <Image
                     src="/Hero/About2.png"
-                    alt="Chimney"
-                    width={320}
-                    height={460}
-                    className="object-cover"
+                    alt="about"
+                    fill
+                    className="w-full h-full object-cover"
                   />
+                  <div className="absolute bottom-0 right-0 h-20 w-20 overflow-hidden z-20">
+                    <CornerShape
+                      className="h-full w-full"
+                      color="white"
+                      IsBottom
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -88,10 +99,14 @@ export default function AboutSection() {
                 </div>
 
                 {/* CTA */}
-                <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition">
+                {/* <StoreButton /> */}
+                <Link
+                  href="/#download" // or external app page
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.03]"
+                >
                   DOWNLOAD APP
-                  <MdArrowOutward height={10} width={10}/>
-                </button>
+                  <MdArrowOutward className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import Container from "@/Custom/Container";
 import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
+import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
 const steps = [
@@ -35,10 +36,13 @@ export default function HowItWorks() {
           </div>
 
           <div className="hidden lg:block lg:text-right">
-            <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition">
+            <Link
+              href="/#download" // or external app page
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.03]"
+            >
               DOWNLOAD APP
-              <MdArrowOutward height={10} width={10} />
-            </button>
+              <MdArrowOutward className="h-4 w-4" />
+            </Link>
           </div>
         </div>
 

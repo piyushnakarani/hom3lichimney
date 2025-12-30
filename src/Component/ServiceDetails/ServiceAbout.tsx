@@ -12,7 +12,7 @@ export default function ServiceAbout({ service }: any) {
           {/* LEFT — Images */}
           <div className="relative w-full flex justify-center lg:justify-start">
             {/* Main image */}
-            <div className="relative  rounded-[32px] overflow-hidden w-113 h-125">
+            <div className="relative  rounded-[32px] overflow-hidden w-100 h-100 lg:w-113 lg:h-125">
               <Image
                 src={about.images.main || "/ServiceDetails/ChimneyCapInstall/ChimneyCap1.png"}
                 alt={about.titleHighlight}
@@ -25,18 +25,19 @@ export default function ServiceAbout({ service }: any) {
             </div>
 
             {/* Overlay image */}
-            <div className="absolute -bottom-20 border-6 border-white z-10 right-0 lg:right-12 w-[250px] h-[270px] rounded-[34px] overflow-hidden">
+            <div className="absolute -bottom-20 border-6 border-white z-10 right-0 lg:right-12 w-50 h-50 lg:w-62.5 lg:h-67.5 rounded-[34px] overflow-hidden">
               <div className="relative overflow-hidden">
+                <div className="w-50 h-50 lg:w-62.5 lg:h-67.5">
                 <Image
                   src={about.images.overlay || "/ServiceDetails/ChimneyCapInstall/ChimneyCap2.png"}
                   alt={about.titleHighlight}
-                  width={300}
-                  height={1000}
+                  fill
                   className="object-cover"
                 />
+                </div>
 
                 {/* Bottom Right Corner Cut */}
-                <div className="absolute bottom-3 right-0 h-20 w-20 overflow-hidden z-20">
+                <div className="absolute bottom-2 right-0 h-20 w-20 overflow-hidden z-20">
                   <CornerShape
                     className="h-full w-full"
                     color="white"
@@ -48,7 +49,7 @@ export default function ServiceAbout({ service }: any) {
           </div>
 
           {/* RIGHT — Content */}
-          <div className="max-w-xl">
+          <div className="max-w-xl mt-10 lg:mt-0">
             <h1 className="text-2xl md:text-3xl lg:text-4xl my-6 uppercase  font-extralight text-black leading-[2.5rem] md:leading-[3.5rem]">
               {about.titlePrimary}{" "}
               <span className="text-secondary font-bold uppercase">

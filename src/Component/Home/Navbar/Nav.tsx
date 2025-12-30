@@ -33,8 +33,8 @@ const Nav = ({ opennav }: Props) => {
         {/* logo */}
         <div className="flex items-center space-x-2 ">
             <Image
-              src="/logo2.png" // or /logo.svg
-              alt="TechDev Logo"
+              src="/Hero/logo.png" // or /logo.svg
+              alt="Hom3li Logo"
               width={80}
               height={80}
               priority
