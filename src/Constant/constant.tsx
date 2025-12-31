@@ -51,7 +51,7 @@ export const services = [
       headingSecondary: "Installation",
       shortDesc:
         "The #1 Way to Stop Animals, Rain, and Debris from Destroying Your Chimney. An open flue is an open invitation to costly damage.",
-      bigText: "Chimney Cap",
+      bigText: "CAP INSTALLATION",
     },
 
     /* =========================
@@ -110,7 +110,7 @@ export const services = [
       headingSecondary: "Removal",
       shortDesc:
         "Hearing Scratching, Fluttering, or Strange Smells from Your Chimney? Get fast, humane professional help today.",
-      bigText: "Animal Rescue",
+      bigText: "ANIMAL REMOVAL",
     },
 
     about: {
@@ -162,7 +162,7 @@ export const services = [
       headingSecondary: "Repair",
       shortDesc:
         "Cracked, Spalling, or Leaning Chimney? Don’t Wait Until It Collapses. Water is the #1 enemy of your masonry.",
-      bigText: "Masonry Fix",
+      bigText: "BRICKS REPAIR",
     },
 
     about: {
@@ -216,7 +216,7 @@ export const services = [
       headingSecondary: "Repair",
       shortDesc:
         "Rusted, Loose, or Damaged Chimney Cap? Fix It Before the Next Storm Hits. Protect your flue from rain and wildlife.",
-      bigText: "Cap Fix",
+      bigText: "CAP REPAIR",
     },
 
     about: {
@@ -269,7 +269,7 @@ export const services = [
       headingSecondary: "Covering",
       shortDesc:
         "Leaking, Rusted, or Ugly Chase Cover? Stop Water Damage Before It Starts at the Top. Protect your prefab fireplace today.",
-      bigText: "Chase Cover",
+      bigText: "CHASE COVERING",
     },
 
     about: {
@@ -323,7 +323,7 @@ export const services = [
       headingSecondary: "Construction",
       shortDesc:
         "Need a Brand-New Chimney or a Complete Rebuild? We Build Them Strong, Safe, and Beautiful. Engineering excellence for your home.",
-      bigText: "New Build",
+      bigText: "CONSTRUCTION",
     },
 
     about: {
@@ -376,7 +376,7 @@ export const services = [
       headingSecondary: "Installation",
       shortDesc:
         "Water Pooling Behind Your Chimney? A Missing Cricket Is Quietly Destroying Your Roof. Redirect water and protect your home.",
-      bigText: "Water Diverter",
+      bigText: "CRICKET INSTALLATION",
     },
 
     about: {
@@ -429,7 +429,7 @@ export const services = [
       headingSecondary: "Repair",
       shortDesc:
         "Cracked or Missing Crown? That’s How Water Destroys Your Entire Chimney. Protect your masonry with a professional concrete crown.",
-      bigText: "Masonry Umbrella",
+      bigText: "CROWN REPAIR",
     },
 
     about: {

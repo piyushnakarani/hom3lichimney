@@ -103,8 +103,8 @@ export default function ServiceSection() {
       {/* Background Title */}
       <HeroTitle
         title="What we offer"
-        className="absolute -bottom-3 lg:-bottom-50 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
-        TextclassName="text-center text-[60px] md:text-[150px] lg:text-[250px] lg:leading-[60vh] !bg-gradient-to-t"
+        className="absolute -bottom-3 lg:-bottom-80 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
+        TextclassName="text-center text-[60px] md:text-[150px] lg:text-[180px] lg:leading-[60vh] !bg-gradient-to-t"
       />
     </section>
   );

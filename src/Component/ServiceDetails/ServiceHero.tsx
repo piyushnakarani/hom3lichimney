@@ -55,8 +55,8 @@ const ServiceHero = ({ service }: any) => {
       </div>
        <HeroTitle
           title={hero.bigText}
-          className="absolute -bottom-5 lg:-bottom-25 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
-          TextclassName="text-center text-[60px] md:text-[110px] lg:text-[250px] lg:leading-[40vh] !from-gray-200/20"
+          className="absolute -bottom-5 lg:-bottom-45 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
+          TextclassName="text-center text-[60px] md:text-[110px] lg:text-[150px] lg:leading-[40vh] !from-gray-200/20"
         />
     </div>
   );

@@ -86,7 +86,7 @@ const Hero = () => {
       </div>
       <HeroTitle
         title="HOM3LI"
-        className="absolute -bottom-10 left-4 lg:-bottom-45 w-full lg:left-10 z-[0] pointer-events-none"
+        className="absolute -bottom-10 left-4 lg:-bottom-70 w-full lg:left-10 z-[0] pointer-events-none"
         TextclassName="text-[110px] md:text-[150px] lg:text-[250px] lg:leading-[60vh]"
       />
     </div>

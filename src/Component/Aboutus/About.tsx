@@ -1,4 +1,3 @@
-import StoreButton from "@/Custom/Button";
 import Container from "@/Custom/Container";
 import CornerShape from "@/Custom/Custom";
 import Image from "next/image";
@@ -12,7 +11,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 items-center gap-4 lg:gap-16 lg:grid-cols-5">
           {/* LEFT IMAGE */}
           <div className="relative order-2 mt-10 lg:mb-0 lg::order-1 col-span-2 justify-center">
-            <div className="relative mx-auto rounded-[32px] overflow-hidden w-80 h-90  md:w-125 md:h-140">
+            <div className="relative mx-auto rounded-[32px] overflow-hidden w-80 h-90  md:w-110 md:h-140 2xl:w-125 2xl:h-160">
               <Image
                 src="/Hero/About1.png"
                 alt="about"

@@ -57,8 +57,8 @@ export default function WhyChooseUs() {
       </Container>
       <HeroTitle
         title="Choose us"
-        className="absolute right-0 -top-3 lg:-top-38 w-full z-[0] pointer-events-none flex justify-end"
-        TextclassName="text-right text-[60px] md:text-[150px] lg:text-[250px] lg:leading-[60vh]"
+        className="absolute right-0 -top-3 lg:-top-72 w-full z-[0] pointer-events-none flex justify-end"
+        TextclassName="text-right text-[60px] md:text-[150px] lg:text-[170px] lg:leading-[60vh]"
       />
     </section>
   );
