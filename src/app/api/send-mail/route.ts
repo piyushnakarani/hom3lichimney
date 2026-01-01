@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message,phone } = await req.json();
+    const { name, email, message,phone, title } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -49,7 +49,7 @@ export async function POST(req: Request) {
       <tr>
       <td class="pad" style="background:#0b2a3c;padding:22px;text-align:center;">
       <h1 class="title" style="margin:0;color:#ffffff;font-size:22px;">
-      HOM<span style="color:#facc15;">3</span>LI CHIMNEY
+      ${title || "Hom3li Chimney Services"}
       </h1>
       <p style="margin:6px 0 0;color:#fde68a;font-size:13px;font-weight:bold;">
       ⚠ IMPORTANT CONTACT REQUEST

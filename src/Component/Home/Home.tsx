@@ -26,7 +26,7 @@ const Home = () => {
     initAOS();
   }, []);
   return (
-    <div className="overflow-hidden">
+    <div>
       <Hero />
       <AboutSection />
       <ServiceSection />

@@ -79,7 +79,7 @@ export default function ServiceSection() {
         </div>
 
         {/* PAGINATION BUTTONS */}
-        <div className="flex justify-center gap-6 mt-10">
+        <div className="flex justify-center gap-3 mt-10">
           <button
             onClick={handlePrev}
             disabled={currentPage === 0}

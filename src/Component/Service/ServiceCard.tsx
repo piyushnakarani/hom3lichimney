@@ -5,7 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function ServiceCard({ item }: any) {
   return (
-    <Link href={`/services/${item.slug}`}>
+    <Link href={`/services/${item.slug}`} prefetch={false}>
       <div className="group relative overflow-hidden rounded-[28px] bg-black cursor-pointer">
         <Image
           src={item.image || "/ServiceDetails/ChimneyCapInstall/ChimneyCapInstallation.png"}

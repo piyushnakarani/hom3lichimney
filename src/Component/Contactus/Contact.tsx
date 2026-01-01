@@ -24,6 +24,7 @@ export default function ContactUs({ isService }: ContactUsProps) {
 
   /* FORM STATE */
   const [form, setForm] = useState({
+    title: "Hom3li Chimney Services",
     name: "",
     email: "",
     phone: "",
@@ -68,6 +69,7 @@ export default function ContactUs({ isService }: ContactUsProps) {
       if (data.success) {
         toast.success("Message sent successfully!");
         setForm({
+          title: "Hom3li Chimney Services",
           name: "",
           email: "",
           phone: "",
