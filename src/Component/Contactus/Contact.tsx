@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "@/Custom/Container";
 import { HiLocationMarker } from "react-icons/hi";
 import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 import { ToastContainer, toast } from "react-toastify";
 import { MdEmail, MdCall, MdArrowOutward } from "react-icons/md";
 
@@ -12,6 +13,7 @@ interface ContactUsProps {
 }
 
 export default function ContactUs({ isService }: ContactUsProps) {
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   /* THEME HANDLING */
   const textColor = isService ? "text-gray-800" : "text-white";
   const mutedText = isService ? "text-gray-600" : "text-white/70";
@@ -55,13 +57,22 @@ export default function ContactUs({ isService }: ContactUsProps) {
   /* SUBMIT */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!captchaToken) {
+      toast.error("Please verify reCAPTCHA");
+      return;
+    }
+
     setLoading(true);
 
     try {
       const res = await fetch("/api/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          captchaToken,
+        }),
       });
 
       const data = await res.json();
@@ -218,6 +229,15 @@ export default function ContactUs({ isService }: ContactUsProps) {
                     ${inputBg} ${inputText} border ${borderColor} focus:border-primary`}
                     autoComplete="off"
                     required
+                  />
+                </div>
+
+                {/* RECAPTCHA */}
+                <div className="pt-2">
+                  <ReCAPTCHA
+                    sitekey="6LfSCj8sAAAAAHtEraMn9F6d-V15S9msvDqAp8U3"
+                    onChange={(token: string | null) => setCaptchaToken(token)}
+                    theme={isService ? "light" : "dark"}
                   />
                 </div>
 

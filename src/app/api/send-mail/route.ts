@@ -3,7 +3,38 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message,phone, title } = await req.json();
+    const { name, email, message,phone, title, captchaToken } = await req.json();
+
+      /* =============================
+       🔐 RECAPTCHA VERIFICATION
+    ============================= */
+    if (!captchaToken) {
+      return NextResponse.json(
+        { success: false, error: "Captcha missing" },
+        { status: 400 }
+      );
+    }
+
+    const captchaRes = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          secret: "6LfSCj8sAAAAAItQFJfIcZVH2GIjPhZj3YefQ7Jf",
+          response: captchaToken,
+        }),
+      }
+    );
+
+    const captchaData = await captchaRes.json();
+
+    if (!captchaData.success) {
+      return NextResponse.json(
+        { success: false, error: "Captcha verification failed" },
+        { status: 403 }
+      );
+    }
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
