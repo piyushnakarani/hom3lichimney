@@ -14,7 +14,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20 relative" id="howwork">
+    <section className="py-10 md:py-20 relative" id="howwork">
       <Container className="relative z-10">
         {/* HEADER */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mb-6 lg:mb-12">
@@ -95,8 +95,27 @@ export default function HowItWorks() {
       </Container>
       <HeroTitle
         title="How it works"
-        className="absolute -bottom-3 lg:-bottom-90 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
-        TextclassName="text-center text-[60px] md:text-[150px] lg:text-[150px] lg:leading-[60vh] !bg-gradient-to-t"
+        className="
+    absolute
+    top-0
+    lg:top-auto
+    lg:-bottom-90
+     2xl:-bottom-55
+    left-1/2
+    -translate-x-1/2
+    w-full
+    z-0
+    pointer-events-none
+  "
+        TextclassName="
+    text-center
+    text-[60px]
+    md:text-[150px]
+    lg:text-[150px]
+    2xl:text-[200px]
+    lg:leading-[60vh]
+    !bg-gradient-to-t
+  "
       />
     </section>
   );

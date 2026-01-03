@@ -48,7 +48,7 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="py-20 bg-[#F9FAFD] relative" id="work">
+    <section className="py-10 md:py-20 bg-[#F9FAFD] relative" id="work">
       <Container className="relative z-10">
         {/* Small title */}
         <div className="flex justify-center">
@@ -103,8 +103,26 @@ export default function ServiceSection() {
       {/* Background Title */}
       <HeroTitle
         title="What we offer"
-        className="absolute -bottom-3 lg:-bottom-80 left-1/2 -translate-x-1/2 w-full z-0 pointer-events-none"
-        TextclassName="text-center text-[60px] md:text-[150px] lg:text-[180px] lg:leading-[60vh] !bg-gradient-to-t"
+        className="
+    absolute 
+    top-0 
+    lg:top-auto 
+    lg:-bottom-80 
+    2xl:-bottom-45
+    left-1/2 
+    -translate-x-1/2 
+    w-full 
+    z-0 
+    pointer-events-none
+  "
+        TextclassName="
+    text-center 
+    text-[60px] 
+    md:text-[150px] 
+    lg:text-[180px] 
+    lg:leading-[60vh] 
+    !bg-gradient-to-t
+  "
       />
     </section>
   );

@@ -26,6 +26,7 @@ const Home = () => {
     initAOS();
   }, []);
   return (
+    
     <div>
       <Hero />
       <AboutSection />

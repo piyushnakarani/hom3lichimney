@@ -155,7 +155,7 @@ export default function TermsAndConditions() {
 
               <a
                 href="mailto:safehomes26@gmail.com"
-                className="inline-flex items-center justify-center bg-secondary text-black px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300"
+                className="inline-flex items-center justify-center bg-primary text-black px-8 py-4 rounded-full font-bold hover:bg-white transition-all duration-300"
               >
                 Contact Support
               </a>

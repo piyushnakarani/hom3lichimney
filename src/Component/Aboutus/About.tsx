@@ -6,7 +6,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function AboutSection() {
   return (
-    <section className="py-20" id="aboutus">
+    <section className="py-10 md:py-20" id="aboutus">
       <Container>
         <div className="grid grid-cols-1 items-center gap-4 lg:gap-16 lg:grid-cols-5">
           {/* LEFT IMAGE */}

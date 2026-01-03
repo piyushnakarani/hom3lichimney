@@ -6,7 +6,7 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 export default function DownloadAppSection() {
   return (
-    <section className="relative h-[85vh] lg:h-auto w-full py-20" id="download">
+    <section className="relative h-[100vh] lg:h-auto w-full py-10 md:py-20" id="download">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] items-center gap-12">
           {/* House pattern background */}
@@ -85,7 +85,7 @@ export default function DownloadAppSection() {
                   alt="App Preview"
                   width={320}
                   height={500}
-                  className="drop-shadow-2xl absolute w-100 -top-15 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:-top-60"
+                  className="drop-shadow-2xl absolute w-100 -top-20 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:-top-60"
                 />
               </div>
             </div>

@@ -1,6 +1,7 @@
 import Container from "@/Custom/Container";
 import Image from "next/image";
 import Link from "next/link";
+import dayjs from "dayjs";
 import { FaFacebookF, FaXTwitter, FaRss, FaPinterestP } from "react-icons/fa6";
 
 export default function Footer() {
@@ -21,8 +22,8 @@ export default function Footer() {
       </div>
 
       {/* CONTENT */}
-      <Container className="relative z-10 py-14 lg:pt-26 lg:pb-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-10">
+      <Container className="relative z-10 py-8 md:py-14 lg:pt-26 lg:pb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-5 md:gap-10">
           {/* Logo */}
           <div className="flex justify-center md:justify-start">
             <Image src="/Hero/logo.png" alt="Hom3li" width={150} height={50} />
@@ -60,7 +61,7 @@ export default function Footer() {
               </Link>
             </div>
 
-            <p className="text-white/80">© 2025. All Rights Reserved.</p>
+            <p className="text-white/80">© {dayjs().year()}. All Rights Reserved.</p>
           </div>
         </div>
       </Container>
