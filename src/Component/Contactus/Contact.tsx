@@ -66,19 +66,30 @@ export default function ContactUs({ isService }: ContactUsProps) {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/send-mail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          captchaToken,
-        }),
-      });
+      const formData = new URLSearchParams();
+      formData.append("full_name", form.name);
+      formData.append("email", form.email);
+      formData.append("phone", form.phone);
+      formData.append("subject", form.subject);
+      formData.append("message", form.message);
+      formData.append("recaptcha_token", captchaToken);
+      formData.append("title", form.title);
+
+      const res = await fetch(
+        "https://hom3li.com/hom3li-mail-send/send_mail.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formData.toString(),
+        }
+      );
 
       const data = await res.json();
 
-      if (data.success) {
-        toast.success("Message sent successfully!");
+      if (data.status) {
+        toast.success(data.message || "Message sent successfully");
         setForm({
           title: "Hom3li Chimney Services",
           name: "",
@@ -87,8 +98,9 @@ export default function ContactUs({ isService }: ContactUsProps) {
           subject: "",
           message: "",
         });
+        setCaptchaToken(null);
       } else {
-        toast.error("Failed to send message");
+        toast.error(data.message || "Failed to send message");
       }
     } catch (error) {
       toast.error("Something went wrong");
