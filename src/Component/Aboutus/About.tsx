@@ -100,8 +100,17 @@ export default function AboutSection() {
                 {/* CTA */}
                 {/* <StoreButton /> */}
                 <Link
-                  href="/#download" // or external app page
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.03]"
+                  href="/#download"
+                  className="
+                      mt-8 inline-flex items-center gap-2
+                      rounded-full px-8 py-4 text-sm font-semibold
+                      text-black
+                      bg-[#FED824]
+                      transition-all duration-300
+                      hover:bg-black
+                      hover:text-white
+                      hover:scale-[1.03]
+                      "
                 >
                   DOWNLOAD APP
                   <MdArrowOutward className="h-4 w-4" />

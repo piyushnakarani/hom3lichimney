@@ -22,7 +22,7 @@ export default function DownloadAppSection() {
             </div>
 
             <div>
-              <h2 className="text-xl md:text-2xl lg:text-4xl my-6 uppercase font-extralight text-black leading-[2rem] md:leading-[2.5rem]">
+              <h2 className="text-xl md:text-2xl lg:text-4xl my-6 uppercase font-extralight text-black leading-[2rem] md:leading-[2.5rem] hover:scale-[1.03] hover:bg-white">
                 <span className="text-secondary font-bold">Download </span>
                 Our App
               </h2>

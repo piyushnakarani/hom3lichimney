@@ -92,7 +92,7 @@ export default function WhyChooseAccordion() {
 
       {/* BUTTON */}
       <div className="flex justify-start">
-        <button className="mt-8 inline-flex items-center justify-start gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-black transition uppercase">
+        <button className="mt-8 inline-flex items-center justify-start gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-black transition uppercase hover:bg-[#FED824] hover:scale-[1.03]">
         Download App
           <MdArrowOutward height={10} width={10} />
         </button>

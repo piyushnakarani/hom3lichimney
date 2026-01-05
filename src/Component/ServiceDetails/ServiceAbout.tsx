@@ -2,6 +2,7 @@ import Image from "next/image";
 import Container from "@/Custom/Container";
 import { MdArrowOutward } from "react-icons/md";
 import CornerShape from "@/Custom/Custom";
+import Link from "next/link";
 
 export default function ServiceAbout({ service }: any) {
   const { about } = service;
@@ -37,7 +38,7 @@ export default function ServiceAbout({ service }: any) {
                 </div>
 
                 {/* Bottom Right Corner Cut */}
-                <div className="absolute bottom-2 right-0 h-20 w-20 overflow-hidden z-20">
+                <div className="absolute bottom-3 right-0 h-20 w-20 overflow-hidden z-20">
                   <CornerShape
                     className="h-full w-full"
                     color="white"
@@ -66,10 +67,13 @@ export default function ServiceAbout({ service }: any) {
             </div>
 
             {/* CTA */}
-            <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition">
+            <Link
+              href="#contact" // or external app page
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#FED824] px-8 py-4 text-sm font-semibold text-black transition hover:bg-black hover:text-white hover:scale-[1.03]"
+            >
               Contact Us
-              <MdArrowOutward height={10} width={10} />
-            </button>
+              <MdArrowOutward className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </Container>

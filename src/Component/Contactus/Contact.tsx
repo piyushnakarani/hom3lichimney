@@ -111,7 +111,7 @@ export default function ContactUs({ isService }: ContactUsProps) {
 
   return (
     <>
-      <section className="relative w-[95%] mx-auto rounded-3xl overflow-hidden bg-contact bg-cover">
+      <section className="relative w-[95%] mx-auto rounded-3xl overflow-hidden bg-contact bg-cover" id="contact">
         {/* BACKGROUND OVERLAY */}
         <div
           className={`absolute inset-0 ${
@@ -257,8 +257,8 @@ export default function ContactUs({ isService }: ContactUsProps) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3
-                  font-semibold text-black hover:bg-yellow-400 transition disabled:opacity-60"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#FED824] px-8 py-3
+                  font-semibold text-black hover:bg-black hover:text-white hover:scale-[1.03] transition disabled:opacity-60"
                 >
                   {loading ? "Sending..." : "Submit"}{" "}
                   <MdArrowOutward height={10} width={10} />

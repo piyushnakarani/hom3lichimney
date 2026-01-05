@@ -38,7 +38,7 @@ export default function HowItWorks() {
           <div className="hidden lg:block lg:text-right">
             <Link
               href="/#download" // or external app page
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.03]"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#FED824] px-8 py-4 text-sm font-semibold text-black transition hover:bg-black hover:text-white hover:scale-[1.03]"
             >
               DOWNLOAD APP
               <MdArrowOutward className="h-4 w-4" />
@@ -70,13 +70,13 @@ export default function HowItWorks() {
                 <p className="font-bold uppercase text-xl">{step}</p>
 
                 {/* Arrow */}
-                <span
+                {/* <span
                   className={`font-semibold ${
                     i === 0 ? "text-2xl text-primary" : "text-xl text-gray-400"
                   }`}
                 >
                   →
-                </span>
+                </span> */}
               </div>
             ))}
           </div>
