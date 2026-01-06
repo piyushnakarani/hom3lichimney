@@ -5,8 +5,8 @@ import { MdArrowOutward } from "react-icons/md";
 
 export default function ServiceCard({ item }: any) {
   return (
-    <Link href={`/services/${item.slug}`} prefetch={false}>
-      <div className="group relative overflow-hidden rounded-[28px] bg-black cursor-pointer">
+    <Link href={`/services/${item.slug}`} prefetch={false} className="group relative">
+      <div className="overflow-hidden rounded-[28px] bg-black cursor-pointer">
         <Image
           src={item.image || "/ServiceDetails/ChimneyCapInstall/ChimneyCapInstallation.png"}
           alt={item.title}
@@ -14,11 +14,11 @@ export default function ServiceCard({ item }: any) {
           height={450}
           className="h-[320px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute top-0 right-0 h-20 w-20 overflow-hidden rounded-tr-[28px] z-20">
+        <div className="absolute top-0 right-0 h-20 w-20 overflow-hidden z-20">
           <CornerShape className="h-full w-full" color="#F9FAFD" />
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/90" />
+        <div className="absolute rounded-[28px] inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/90" />
 
         <div className="absolute inset-0 flex flex-col justify-end py-6 px-4 text-white">
           <div className="transition-all duration-500">

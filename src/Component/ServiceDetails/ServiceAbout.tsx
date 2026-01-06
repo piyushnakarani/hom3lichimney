@@ -13,32 +13,32 @@ export default function ServiceAbout({ service }: any) {
           {/* LEFT — Images */}
           <div className="relative w-full flex justify-center lg:justify-start">
             {/* Main image */}
-            <div className="relative  rounded-[32px] overflow-hidden w-100 h-100 lg:w-113 lg:h-125">
+            <div className="relative overflow-hidden w-100 h-100 lg:w-113 lg:h-125">
               <Image
                 src={about.images.main || "/ServiceDetails/ChimneyCapInstall/ChimneyCap1.png"}
                 alt={about.titleHighlight}
                 fill
-                className="w-full h-full object-cover"
+                className="w-full h-full rounded-[32px] object-cover"
               />
-              <div className="absolute top-0 right-0 h-20 w-20 overflow-hidden rounded-tr-[28px] z-20">
+              <div className="absolute top-0 right-0 h-20 w-20 overflow-hidden z-20">
                 <CornerShape className="h-full w-full" color="white" />
               </div>
             </div>
 
             {/* Overlay image */}
-            <div className="absolute -bottom-20 border-6 border-white z-10 right-0 lg:right-12 w-50 h-50 lg:w-62.5 lg:h-67.5 rounded-[34px] overflow-hidden">
+            <div className="absolute -bottom-20 z-10 right-0 lg:right-12 w-50 h-50 lg:w-62.5 lg:h-67.5 rounded-[34px] overflow-hidden">
               <div className="relative overflow-hidden">
                 <div className="w-50 h-50 lg:w-62.5 lg:h-67.5">
                 <Image
                   src={about.images.overlay || "/ServiceDetails/ChimneyCapInstall/ChimneyCap2.png"}
                   alt={about.titleHighlight}
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-[32px] border-6 border-white"
                 />
                 </div>
 
                 {/* Bottom Right Corner Cut */}
-                <div className="absolute bottom-3 right-0 h-20 w-20 overflow-hidden z-20">
+                <div className="absolute bottom-1.25 right-1.25 h-20 w-20 overflow-hidden z-20">
                   <CornerShape
                     className="h-full w-full"
                     color="white"

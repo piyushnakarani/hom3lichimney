@@ -46,12 +46,12 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
               {/* IMAGE — 2 columns */}
               <div className="hidden lg:flex order-1 lg:order-2 lg:col-span-2  justify-center">
-                <div className="relative rounded-[32px] overflow-hidden w-113 h-95">
+                <div className="relative overflow-hidden w-124 h-95">
                   <Image
                     src="/Hero/About2.png"
                     alt="about"
                     fill
-                    className="w-full h-full object-cover"
+                    className="w-full h-full rounded-[28px] object-cover"
                   />
                   <div className="absolute bottom-0 right-0 h-20 w-20 overflow-hidden z-20">
                     <CornerShape

@@ -53,8 +53,8 @@ export default function HowItWorks() {
             {steps.map((step, i) => (
               <div
                 key={i}
-                className={`relative flex items-center justify-between rounded-xl px-5 py-6 pl-12 shadow-primary transition 
-        ${i === 0 ? "bg-[#1F586E] text-white" : "bg-white text-gray-500"}
+                className={`relative flex items-center justify-between rounded-xl px-5 py-6 pl-12 shadow-primary transition
+        ${i === 0 ? "bg-[#1F586E] text-white hover:bg-[#233840]" : "bg-white text-gray-500 hover:bg-gray-300 hover:text-gray-700"}
       `}
               >
                 {/* Number circle (half outside) */}
