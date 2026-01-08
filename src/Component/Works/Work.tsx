@@ -99,7 +99,7 @@ export default function HowItWorks() {
     absolute
     top-0
     lg:top-auto
-    lg:-bottom-90
+    lg:-bottom-45
      2xl:-bottom-55
     left-1/2
     -translate-x-1/2

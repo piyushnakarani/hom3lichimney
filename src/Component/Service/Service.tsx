@@ -107,7 +107,7 @@ export default function ServiceSection() {
     absolute 
     top-0 
     lg:top-auto 
-    lg:-bottom-80 
+    lg:-bottom-40 
     2xl:-bottom-45
     left-1/2 
     -translate-x-1/2 
