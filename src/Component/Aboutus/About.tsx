@@ -1,12 +1,13 @@
 import Container from "@/Custom/Container";
 import CornerShape from "@/Custom/Custom";
+import HeroTitle from "@/Custom/HeroTitle";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
 export default function AboutSection() {
   return (
-    <section className="py-10 md:py-20" id="aboutus">
+    <section className="relative py-10" id="aboutus">
       <Container>
         <div className="grid grid-cols-1 items-center gap-4 lg:gap-16 lg:grid-cols-5">
           {/* LEFT IMAGE */}
@@ -120,6 +121,31 @@ export default function AboutSection() {
           </div>
         </div>
       </Container>
+            {/* Background Title */}
+            <HeroTitle
+              title="About Us"
+              
+              className="
+          absolute 
+          top-0 
+          lg:top-auto 
+          lg:-bottom-40 
+          2xl:-bottom-45
+          left-1/2 
+          -translate-x-1/2 
+          w-full 
+          z-0 
+          pointer-events-none
+        "
+              TextclassName="
+          text-center 
+          text-[60px] 
+          md:text-[150px] 
+          lg:text-[180px] 
+          lg:leading-[60vh] 
+          !bg-gradient-to-t
+        "
+            />
     </section>
   );
 }

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ServiceAbout({ service }: any) {
   const { about } = service;
   return (
-    <section className="py-20">
+    <section className="py-10">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* LEFT — Images */}

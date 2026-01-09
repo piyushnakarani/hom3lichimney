@@ -48,7 +48,7 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="py-10 md:py-20 bg-[#F9FAFD] relative" id="work">
+    <section className="py-10 bg-[#F9FAFD] relative" id="work">
       <Container className="relative z-10">
         {/* Small title */}
         <div className="flex justify-center">

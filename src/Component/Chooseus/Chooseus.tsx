@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
       <div className="absolute inset-0 bg-[#071824]/90"></div>
 
       {/* CONTENT */}
-      <Container className="relative z-10 py-10 lg:py-20 !w-[85%]">
+      <Container className="relative z-10 py-10 lg:py-15 !w-[85%]">
         {/* Heading */}
         <div className="flex flex-col justify-start">
           <div className="flex items-center gap-2">

@@ -14,7 +14,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-10 md:py-20 relative" id="howwork">
+    <section className="py-10 lg:pb-20 relative" id="howwork">
       <Container className="relative z-10">
         {/* HEADER */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mb-6 lg:mb-12">
