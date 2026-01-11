@@ -9,7 +9,7 @@ export default function ServiceDetails({ service }: any) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           
           {/* LEFT CARD */}
-          <div className="rounded-[28px] border-2 border-[#FFD83D] bg-white p-8 lg:p-10 shadow-xl">
+          <div className="rounded-[28px] border-2 border-[#FFD83D] bg-white p-8 lg:p-10 shadow-xl" data-aos="zoom-in">
             <h3 className="text-xl sm:text-2xl font-semibold text-[#9C7A12] leading-snug">
               {details.leftCard.title}
             </h3>
@@ -30,7 +30,7 @@ export default function ServiceDetails({ service }: any) {
           </div>
 
           {/* RIGHT CARD */}
-          <div className="rounded-[28px] border-2 border-[#FFD83D] bg-white p-8 lg:p-10 shadow-xl">
+          <div className="rounded-[28px] border-2 border-[#FFD83D] bg-white p-8 lg:p-10 shadow-xl" data-aos="zoom-in">
             <h3 className="text-2xl font-semibold text-gray-900">
             {details.rightCard.title}
             </h3>

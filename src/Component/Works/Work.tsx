@@ -49,7 +49,7 @@ export default function HowItWorks() {
         {/* CONTENT GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-6 lg:gap-10 items-center">
           {/* LEFT - STEPS */}
-          <div className="space-y-4 col-span-2">
+          <div className="space-y-4 col-span-2" data-aos="fade-up-right">
             {steps.map((step, i) => (
               <div
                 key={i}
@@ -82,7 +82,7 @@ export default function HowItWorks() {
           </div>
 
           {/* RIGHT - IMAGE */}
-          <div className="relative rounded-3xl overflow-hidden col-span-4">
+          <div className="relative rounded-3xl overflow-hidden col-span-4" data-aos="fade-left">
             <Image
               src="/Work/WorkRight.png" // replace with your image
               alt="How it works"

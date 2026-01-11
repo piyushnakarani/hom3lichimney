@@ -6,14 +6,14 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 export default function DownloadAppSection() {
   return (
-    <section className="relative h-[100vh] lg:h-auto w-full py-10 md:py-20" id="download">
+    <section className="relative h-[70vh] lg:h-auto w-full py-10 md:py-20" id="download">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] items-center gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] items-center lg:gap-12">
           {/* House pattern background */}
           <div className="absolute top-0 right-0 h-full w-[70%] bg-no-repeat bg-right bg-cover" />
 
           {/* LEFT CONTENT */}
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos="fade-right">
             <div className="flex items-center gap-4">
               <p className="text-sm md:text-lg font-bold tracking-[0.2em] text-secondary uppercase">
                 Safety First
@@ -77,9 +77,9 @@ export default function DownloadAppSection() {
           </div>
 
           {/* RIGHT VISUAL */}
-          <div className="relative grid grid-cols-2">
+          <div className="relative grid grid-cols-2" data-aos="fade-left">
             <div>
-              <div className="flex h-full items-center justify-center">
+              <div className="hidden lg:flex h-full items-center justify-center">
                 <Image
                   src="/Download/download.png"
                   alt="App Preview"
@@ -89,13 +89,13 @@ export default function DownloadAppSection() {
                 />
               </div>
             </div>
-            <div className="hidden lg:flex h-full items-center justify-center">
+            <div className="flex h-full items-center justify-center">
               <Image
                 src="/Download/cartoon.png"
                 alt="App Preview"
                 width={420}
                 height={900}
-                className="drop-shadow-2xl absolute w-100 top-0 lg:-top-65"
+                className="drop-shadow-2xl absolute left-1/2 -translate-x-1/2 w-70 lg:left-auto lg:translate-x-0 lg:w-100 top-0 lg:-top-65"
               />
             </div>
           </div>

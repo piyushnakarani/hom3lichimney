@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-[0_30px_80px_rgba(7,24,36,0.9)]">
+          <div className="relative rounded-2xl overflow-hidden shadow-[0_30px_80px_rgba(7,24,36,0.9)]" data-aos="fade-right">
             <Image
               src="/Chooseus/Chooseright.png"
               alt="Chimney Installation"

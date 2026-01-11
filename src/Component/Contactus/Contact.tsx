@@ -123,7 +123,7 @@ export default function ContactUs({ isService }: ContactUsProps) {
         <Container className="relative z-10 py-6 lg:py-10 !w-[85%]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
             {/* FORM */}
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1" data-aos="fade-right">
               <form onSubmit={handleSubmit} className="space-y-5 p-1 md:p-8">
                 {/* NAME + EMAIL */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -267,7 +267,7 @@ export default function ContactUs({ isService }: ContactUsProps) {
             </div>
 
             {/* RIGHT CONTENT */}
-            <div className="order-1 lg:order-2">
+            <div className="order-1 lg:order-2" data-aos="fade-left">
               <h2
                 className={`text-xl md:text-2xl lg:text-4xl my-6 uppercase font-extralight leading-[2rem] md:leading-[2.5rem] ${textColor}`}
               >

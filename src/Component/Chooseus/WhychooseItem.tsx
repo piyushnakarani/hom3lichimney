@@ -36,7 +36,7 @@ export default function WhyChooseAccordion() {
   };
 
   return (
-    <div>
+    <div data-aos="fade-up">
       {DATA.map((item) => {
         const isOpen = openId === item.id;
 

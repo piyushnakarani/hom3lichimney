@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ResponsiveNav from "@/Component/Home/Navbar/ResponsiveNav";
 import { manrope } from "./fonts";
-import Footer from "@/Component/Home/Footer/Footer";
-
+import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
   title: "Hom3li",
@@ -19,16 +17,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${manrope.className} antialiased bg-white`}>
-        <ResponsiveNav />
-        {children}
-        <Footer />
-        {/* <TopScroll /> */}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

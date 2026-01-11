@@ -11,7 +11,7 @@ export default function ServiceAbout({ service }: any) {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* LEFT — Images */}
-          <div className="relative w-full flex justify-center lg:justify-start">
+          <div className="relative w-full flex justify-center lg:justify-start" data-aos="fade-right">
             {/* Main image */}
             <div className="relative overflow-hidden w-100 h-100 lg:w-113 lg:h-125">
               <Image
@@ -50,7 +50,7 @@ export default function ServiceAbout({ service }: any) {
           </div>
 
           {/* RIGHT — Content */}
-          <div className="max-w-xl mt-10 lg:mt-0">
+          <div className="max-w-xl mt-10 lg:mt-0" data-aos="fade-left">
             <h1 className="text-2xl md:text-3xl lg:text-4xl my-6 uppercase  font-extralight text-black leading-[2.5rem] md:leading-[3.5rem]">
               {about.titlePrimary}{" "}
               <span className="text-secondary font-bold uppercase">
